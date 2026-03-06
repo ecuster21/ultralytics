@@ -519,6 +519,7 @@ class Model(torch.nn.Module):
         is_cli = (ARGV[0].endswith("yolo") or ARGV[0].endswith("ultralytics")) and any(
             x in ARGV for x in ("predict", "track", "mode=predict", "mode=track")
         )
+        print("李杰代码注入！")
 
         custom = {"conf": 0.25, "batch": 1, "save": is_cli, "mode": "predict", "rect": True}  # method defaults
         args = {**self.overrides, **custom, **kwargs}  # highest priority args on the right
